@@ -23,10 +23,6 @@ int main(int nargs, char* argv[])
 
   char* s = argv[1];	
 
-
-  //char dni[] = "21532376";
-  //char* s = dni;
-
   char serie[] = "89456789";
   char* t = serie;
 
