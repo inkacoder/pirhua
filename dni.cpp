@@ -97,7 +97,7 @@ char alphaValidationCharacter(char *DNI)
   int modulus = 0;
   modulus = sum % 11;
   
-  return 'A' + (modulo==0?11:modulo) - 1;
+  return 'A' + (modulus==0?11:modulus) - 1;
 
 }
 
