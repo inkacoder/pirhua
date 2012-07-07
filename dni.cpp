@@ -69,7 +69,7 @@ int main(int argc, char* argv[])
 	} 
 	catch (TCLAP::ArgException &e)  // catch any exceptions
 	{ 
-		std::cerr << "error: " << e.error() << " en el argumento " << e.argId() << std::endl; 
+		std::cerr << "error: " << e.error() << " in the argument " << e.argId() << std::endl; 
         }
  
 	return EXIT_SUCCESS;
@@ -84,21 +84,19 @@ char alphaValidationCharacter(char *DNI)
 
   char *s = DNI;
 
-  int suma = 0, parcial = 0;
+  int sum = 0, partial = 0;
 
   while(*s!='\0')
   {
-    //std::cout << *s << " x " << *t << " = " << (parcial = (*s-'0')*(*t-'0')) << std::endl;
-    parcial = (*s-'0')*(*t-'0');
-    suma += parcial;
+    partial = (*s-'0')*(*t-'0');
+    sum += partial;
     s++;
     t++;
-  } //std::cout << "suma = " << suma << std::endl;
+  } 
 
-  int modulo = 0;
-  modulo = suma % 11;
-  //std::cout << "modulo = " << modulo << std::endl;
-
+  int modulus = 0;
+  modulus = sum % 11;
+  
   return 'A' + (modulo==0?11:modulo) - 1;
 
 }
@@ -117,4 +115,3 @@ int digitValidationCharacter(char* DNI)
   
 }
 
- 
